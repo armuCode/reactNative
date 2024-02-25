@@ -14,6 +14,7 @@ export const PositionScreen = () => {
   const {width, height} = useWindowDimensions();
   return (
     <View style={styles.container}>
+      <View style={styles.cajaVerde} />
       <View style={styles.cajaMorada} />
       <View style={styles.cajaNaranja} />
     </View>
@@ -32,7 +33,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#5856d6',
     borderWidth: 10,
     borderColor: 'white',
-    top: 20,
+    position: 'absolute',
+    top: 0,
   },
   cajaNaranja: {
     backgroundColor: '#F0A23B',
@@ -40,6 +42,19 @@ const styles = StyleSheet.create({
     height: 100,
     borderColor: 'white',
     borderWidth: 10,
+  },
+  cajaVerde: {
+    backgroundColor: 'green',
+    // width: 100,
+    // height: 100,
+    borderColor: 'white',
+    borderWidth: 10,
+    // position: 'absolute',
+    // top: 0,
+    // left: 0,
+    // right: 0,
+    // bottom: 0,
+    ...StyleSheet.absoluteFillObject, //the same as before
   },
   title: {
     fontSize: 30,
